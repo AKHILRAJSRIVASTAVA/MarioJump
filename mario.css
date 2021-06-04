@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.main {
+    height: 100vh;
+    background: url(bg.jpg);
+    background-size: 100% 100%;
+    position: relative;
+    overflow: hidden;
+}
+.mario {
+    position: relative;
+    top: 0vh;
+    left: 0px;
+    height: 100px;
+}
+.brick{
+   
+    position: absolute;
+    top: 67vh;
+    left: 1111px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.brickrun{
+    animation: run 5s linear infinite;
+}
+#brick2{
+    animation-delay: 3s;
+    border-radius: 50%;
+}
+.marioAnimate {
+    animation: jump 1.5s linear infinite;
+}
+.marioStart{
+    animation : start 1s linear 1;
+}
+@keyframes start{
+    0%{
+        top: 0vh;
+    }
+    100%{
+        top: 60vh;
+    }
+}
+@keyframes jump {
+    0% {
+        top: 60vh;
+    }
+    50% {
+        top: 25vh;
+    }
+    100% {
+        top: 60vh;
+    }
+}
+@keyframes run {
+    0% {
+        left: 1211px;
+        transform: rotate(360deg);
+       }
+    50%{
+        left: 620px;
+        transform: rotate(180deg);
+    }    
+    100% {
+        left: -10px;
+        transform: rotate(0deg);
+    }
+}
+#gamestart{
+    position: absolute;
+    top: auto;
+    left: 40%;
+    background-color: rgb(149, 189, 110);
+    width: fit-content;
+    height: auto;
+    font-size: 2rem;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 10px 20px;
+    padding-right: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+#scoreboard{
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    background-color: rgb(149, 189, 110);
+    width: fit-content;
+    height: fit-content;
+    font-size: 2rem;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    padding-right: 20px;
+    display: flex;
+}
